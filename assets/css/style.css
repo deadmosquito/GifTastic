@@ -1,3 +1,16 @@
 button, div, form, input {
     margin: 10px;
   }
+  #movie-form, h1 {
+    color: aliceblue;
+  }
+  body {
+    background: url("https://www.davistheater.com/wp-content/uploads/2016/08/movie-theatre-interior.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  img{
+    float: left ; 
+    padding: 10px ; 
+    
+} 
