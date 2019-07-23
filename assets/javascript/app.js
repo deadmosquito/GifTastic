@@ -37,7 +37,7 @@
         // This line will grab the text from the input box
         var movie = $("#movie-input").val().trim();
         // The movie from the textbox is then added to our array
-        movies.push(movie);
+        movie.push(movie);
 
         // calling renderButtons which handles the processing of our movie array
         renderButtons();
@@ -63,11 +63,11 @@
       })
       $("button").on("click", function() {
         // Grabbing and storing the data-animal property value from the button
-        var movies = $(this).attr("data-movie");
+        var movie = $(this).attr("data-movie");
   
         // Constructing a queryURL using the animal name
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-          movies + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+          movie + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
   
         // Performing an AJAX request with the queryURL
         $.ajax({
@@ -77,10 +77,11 @@
           // After data comes back from the request
           .then(function(response) {
             console.log(queryURL);
-  
+            console.log(movie);
             console.log(response);
             // storing the data from the AJAX request in the results variable
             var results = response.data;
+            $(".clickable-image").text(JSON.stringify(response));
   
             // Looping through each result item
             for (var i = 0; i < results.length; i++) {
