@@ -1,6 +1,6 @@
 // array of movies
 var movies = ["The Matrix", "The Thing", "Mad Max", "Aliens", "The Good The Bad and The Ugly", "Lord of the Rings",
-  "The Matrix", "Shawn of the Dead", "Kazaam"];
+  "The Princess Bride", "Shawn of the Dead", "Star Wars"];
 
 // function for scraping the JSON content for each button into the empty div on the html page
 function showGif() {
